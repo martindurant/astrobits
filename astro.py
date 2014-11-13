@@ -17,7 +17,7 @@ k=1.3806504e-23 #J/K
 def X_ext(E, nH,dE=0):
     """Extinction from XSPEC 'wabs', for input energy E
 in keV and N_H (10^24 cm-2)returns factor (<1) """
-    energy, absorb, another = loadtxt('/usr/local/heasoft-6.11/spectral/modelData/absorp.dat',unpack=True)
+    energy, absorb, another = loadtxt('/usr/local/heasoft-6.13/spectral/modelData/absorp.dat',unpack=True)
     if dE is 0:tau = lininterp(energy,absorb,E)
     else:
         tau = E-E
